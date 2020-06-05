@@ -1,0 +1,33 @@
+public class
+{
+
+ String nome;
+ float peso;
+ float altura;
+ 
+
+ float calcularIMC() {
+	 return (float) (peso/Math.pow(altura, 2));
+ }
+ 
+ String classificarIMC() {
+	 float imc;
+	 String classe;
+	 imc = calcularIMC();
+	 
+	 if (imc <= 19)
+	 classe = "Abaixo do Peso";
+	 else
+	 if (imc <= 25)
+	 classe = "Peso ideal";
+	 else
+	 if (imc <= 30)
+	 classe = "Acima do Peso";
+	 else
+	 if (imc <= 35)
+	 classe = "Obesidade Leve";
+	 else
+	 classe = "Obesidade";
+	 
+	 return classe;
+ }
